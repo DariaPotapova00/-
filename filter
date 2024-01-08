@@ -1,0 +1,17 @@
+def process_logs(logs):
+    processed_logs = []
+    for log in logs:
+        if not log.startswith("####"):
+            processed_logs.append(log.lstrip("%%"))
+    return processed_logs
+
+logs = []
+
+n = int(input("Введите количество логов: "))
+for i in range(n):
+    log = input(f"Введите лог {i+1}: ")
+    logs.append(log)
+
+processed_logs = process_logs(logs)
+for log in processed_logs:
+    print(log)
