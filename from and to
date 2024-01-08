@@ -1,0 +1,13 @@
+n = int(input())
+lst = []
+for i in range(n):
+    lst.append(int(input()))
+
+p = int(input())
+q = int(input())
+
+sum = 0
+for num in lst[p-1:q]:
+    sum += num
+
+print(sum)
