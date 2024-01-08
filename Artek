@@ -1,0 +1,20 @@
+def Artek(s, n):
+    top_students = []
+    grades = {}
+
+    for item in s.split(','):
+        name, grade = item.strip().split()
+        top_students.append(name)
+        grades[name] = int(grade)
+
+    top_students.sort()
+
+    if len(top_students) > n:
+        print(', '.join(top_students[:n]))
+    else:
+        print(', '.join(top_students))
+
+s = input("Введите имена отличников и их оценки через запятую: ")
+n = int(input("Введите количество свободных мест: "))
+
+Artek(s, n)
